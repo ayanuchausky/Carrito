@@ -1,0 +1,36 @@
+{
+    "name": "ProductoCantidad",
+    "fields": [
+        {
+            "fieldName": "cantidad",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "producto",
+            "otherEntityRelationshipName": "productoCantidad",
+            "relationshipName": "producto",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "carrito",
+            "otherEntityRelationshipName": "productoCant",
+            "relationshipName": "carrito",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200607050400",
+    "entityTableName": "producto_cantidad",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

@@ -1,0 +1,45 @@
+{
+    "name": "Carrito",
+    "fields": [
+        {
+            "fieldName": "tipo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "total",
+            "fieldType": "Double"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "productoCantidad",
+            "otherEntityRelationshipName": "carrito",
+            "relationshipName": "productoCant"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "fechas",
+            "otherEntityRelationshipName": "carrito",
+            "relationshipName": "fecha",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "cliente",
+            "otherEntityRelationshipName": "carritos",
+            "relationshipName": "cliente",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200607050100",
+    "entityTableName": "carrito",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

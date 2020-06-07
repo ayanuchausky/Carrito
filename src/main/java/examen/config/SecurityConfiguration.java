@@ -69,7 +69,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
             .antMatchers("/i18n/**")
             .antMatchers("/content/**")
             .antMatchers("/swagger-ui/index.html")
-            .antMatchers("/test/**");
+            .antMatchers("/test/**")
+            .antMatchers("/api/clientes/vip");
     }
 
     @Override
@@ -120,6 +121,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
             .antMatchers("/management/health").permitAll()
             .antMatchers("/management/info").permitAll()
             .antMatchers("/management/prometheus").permitAll()
+            .antMatchers("/api/clientes/vip").permitAll()
             .antMatchers("/management/**").hasAuthority(AuthoritiesConstants.ADMIN);
         // @formatter:on
     }
