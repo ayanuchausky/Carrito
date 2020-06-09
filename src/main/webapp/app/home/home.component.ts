@@ -48,16 +48,14 @@ export class HomeComponent implements OnInit, OnDestroy {
      private productoService: ProductoService, private carritoService : CarritoService,
      protected eventManager: JhiEventManager) {}
 
-  ngOnInit(): void {
-    this.authSubscription = this.accountService.getAuthenticationState().subscribe(account => {this.account = account
+     ngOnInit(): void {
       this.loadAllProductos();
-      this.registerChangeInProductos();
-      this.fechaService.find(1).subscribe((res: HttpResponse<IFechas>) => {
-        this.fechaActual = res.body || undefined;
-      })
-    });
-    
-  }
+        this.fechaService.find(1).subscribe((res: HttpResponse<IFechas>) => {
+          this.fechaActual = res.body || undefined;
+        });
+      this.authSubscription = this.accountService.getAuthenticationState().subscribe(account => {this.account = account})
+      
+    }
 
   isAuthenticated(): boolean {
     return this.accountService.isAuthenticated();
