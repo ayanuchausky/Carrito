@@ -15,3 +15,5 @@
  
  El servicio que se dejó expuesto para consultas REST, es el de consultar clientes VIP, y no requiere autenticación. Una manera de consultarlos puede ser a traves de Postman, con la URL: http://localhost:8080/api/clientes/vip
  
+Si existe desfasaje entre la fecha cargada en MySQL y la mostrada en el proyecto, se soluciona corriendo "set global time_zone = "-3:00""
+en el Workbench.
