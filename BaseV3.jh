@@ -1,0 +1,39 @@
+entity Carrito {
+tipo String,
+total Double,
+fecha LocalDate
+}
+entity Cliente {
+esVip Boolean,
+comprasUltMes Double
+}
+entity Fechas {
+fecha LocalDate
+}
+entity ProductoCantidad {
+cantidad Integer
+}
+entity Producto {
+nombre String,
+precio Double
+}
+entity HistorialCategoria {
+mes Integer,
+seConvierteEn String
+}
+relationship OneToOne {
+Cliente{usuario} to User,
+ProductoCantidad{producto} to Producto
+}
+relationship OneToMany {
+Cliente{carritos} to Carrito,
+Carrito{productoCant} to ProductoCantidad
+}
+relationship ManyToOne {
+HistorialCategoria {cliente} to Cliente
+}
+
+
+
+
+

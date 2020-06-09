@@ -1,0 +1,32 @@
+{
+    "name": "HistorialCategoria",
+    "fields": [
+        {
+            "fieldName": "mes",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "seConvierteEn",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "cliente",
+            "otherEntityRelationshipName": "historialCategoria",
+            "relationshipName": "cliente",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200609050400",
+    "entityTableName": "historial_categoria",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}
